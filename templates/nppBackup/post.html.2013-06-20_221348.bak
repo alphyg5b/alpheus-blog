@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>New Post</title>
+		<style type = "text/css">
+			h1{
+				align : center;
+				background : orange;
+				margin-left : 500px;
+				margin-right : 500px;
+				font-family : chiller;
+				font-size : 36;
+			}
+			.mystyle{
+				margin : 40px;
+			}
+			.label{
+				height : 300px;
+				width : 400px;
+			}
+			p{
+				margin : 40px;
+				color : orange;
+			}
+			.heading{
+				font-family : kristen ITC;
+				color : orange;
+				font-size : 38;
+			}
+			.heading1{
+				font-size : 34;
+			}
+		</style>
+	</head>
+	<body class = "mysytle" background = "http://wallpapersget.com/wp-content/uploads/2012/03/abstract-blue-wallpaper-apple-background-cool-tiger-fractal-animal.jpg" >
+		<h1 align = "center">ALphEUs Blog</h1><br>
+		% for post in posts %
+		<div class = "post">
+			<div class = "post-title">%(post.title)s</div>
+				<pre class = "post-body">%(post.post)s</pre>
+		</div>
+		% endfor %
+	</body>

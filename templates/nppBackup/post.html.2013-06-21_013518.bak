@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>My Blog</title>
+		<style type = "text/css">
+			h1{
+				align : center;
+				background : orange;
+				margin-left : 500px;
+				margin-right : 500px;
+				font-family : chiller;
+				font-size : 36;
+			}
+			.mystyle{
+				margin : 40px;
+			}
+			.post{
+				margin-left : 150px;
+				margin-top : 60px;
+				margin-bottom : 60px
+			}
+			.post-title{
+				font-family : algerian;
+				font-size : 36;
+				color : orange
+			}
+			.post-body{
+				color : C0FF00;
+				font-size : 24;
+				font-family : bradley hand ITC
+			}
+			a{
+				text-decoration : none;
+				color : black
+			}
+			.pos{
+				position : fixed;
+				top : 0px;
+				left : 100px;
+				align : center;
+			}
+			.nomargin{
+				font-family : jokerman;
+				font-size : 40;
+				position : fixed;
+				left : 20px;
+				top : 80px;
+				color : C0FF00;
+			}
+			.me{
+				color : orange;
+				position : fixed;
+				bottom : 0px;
+				left : 0px;
+				font-size : 20
+			}
+			.date{
+				position : static;
+				right : 0px;
+			}
+		</style>
+	</head>
+	<body class = "mysytle" background = "http://wallpapersget.com/wp-content/uploads/2012/03/abstract-blue-wallpaper-apple-background-cool-tiger-fractal-animal.jpg" >
+		<a href = "/newpost" class = "nomargin">new<br>post</a><br>
+		<a href = "https://www.facebook.com/GauravBareja" class = "me">© g5b</a>
+		<h1 align = "center" class = "pos"><a href = "/">ALphEUs Blog</a></h1><br>
+		{% for post in posts %}
+		<div class = "post">
+			<div class = "post-title">{{post.title}}</div><hr width = 50% align = "left"><div class = "date">{{post.created}}</div>
+				<pre class = "post-body">{{post.post}}</pre>
+		</div>
+		{% endfor %}
+	</body>
+</html>

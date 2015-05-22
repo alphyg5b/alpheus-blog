@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>New Post</title>
+		<style type = "text/css">
+			h1{
+				align : center;
+				background : orange;
+				margin-left : 500px;
+				margin-right : 500px;
+				font-family : chiller;
+				font-size : 36;
+			}
+			.mystyle{
+				margin : 40px;
+			}
+			.label{
+				height : 300px;
+				width : 400px;
+			}
+			p{
+				margin : 40px;
+				color : orange;
+			}
+			.heading{
+				font-family : kristen ITC;
+				color : orange;
+				font-size : 38;
+			}
+			.heading1{
+				font-size : 34;
+			}
+			.error1{
+                                margin : 40px;
+                                color : red;
+                                font-size : 34;
+			}
+		</style>
+	</head>
+	<body class = "mysytle" background = "http://thisblogneedsatitle.files.wordpress.com/2013/01/wallpapers-free-funny.jpg" >
+		<h1 align = "center">ALphEUs Blog</h1><br>
+		<div class = "heading" >NEW POST</div><br><br>
+                <form method = "post">
+		<p class = "heading1"><font align ="left">Subject :</font><br>
+		<input type = "text" name = "subject" value = {{valtitle}}><br></p>
+		<p class = "heading1"><font align ="left">Content :</font><br>
+		<textarea class = "label" name = "post">{{valpost}}</textarea><br></p>
+		<div class= "error1" name = "error">{{error}}</div>
+		<p><input type = "submit"></p>
+		</form>
+	</body>
+</html>
